@@ -2,7 +2,7 @@
 Contributors: apicoder
 Tags: doctors, medical, directory, physicians, specialists
 Requires at least: 5.0
-Tested up to: 6.6
+Tested up to: 6.9
 Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GPLv2 or later

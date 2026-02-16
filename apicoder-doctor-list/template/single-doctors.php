@@ -49,7 +49,7 @@
 				</div>
 <div class="clearfix mb-5"> </div>
 
-<div class="col-12"><div class="card border border-info"><?php if ( comments_open() || get_comments_number() ) : comments_template(); endif; ?></div></div>
+<div class="card border border-success"><div class="card-body"><?php if ( comments_open() || get_comments_number() ) : comments_template(); endif; ?></div></div>
 			<?php endwhile; ?>
 
 		<?php else : ?>
@@ -61,4 +61,5 @@
 <div class="clearfix"></div>
 <div class="p-5"> </div>
 <div class="clearfix"></div>
+
 <?php get_footer(); ?>
