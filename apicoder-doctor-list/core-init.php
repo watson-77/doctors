@@ -18,7 +18,7 @@ require_once __DIR__ . '/load-translations-apicoder.php';
 *  Register CSS
 */
 function adl_register_core_css(){
-wp_enqueue_style('adl-core', ADL_CORE_CSS . 'adl-core.css',null,time(),'all');
+wp_enqueue_style('adl-core', ADL_CORE_CSS . 'adl-core.css',null,'1.0.1','all');
 wp_enqueue_style('adl-core-bootstrap', "//cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css");
 };
 add_action( 'wp_enqueue_scripts', 'adl_register_core_css' );    
@@ -27,14 +27,14 @@ add_action( 'wp_enqueue_scripts', 'adl_register_core_css' );
 */
 function adl_register_core_js(){
 // Register Core Plugin JS	
-wp_enqueue_script('adl-core', ADL_CORE_JS . 'adl-core.js','jquery',time(),true);
+wp_enqueue_script('adl-core', ADL_CORE_JS . 'adl-core.js','jquery','1.0.1',true);
 };
 add_action( 'wp_enqueue_scripts', 'adl_register_core_js' );   
 
 function load_cdn_scripts() {
     // Регистрация и подключение скрипта из CDN
-    wp_register_script( 'my-cdn-query', 'https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js', array(), '1.0.0', true );
-    wp_enqueue_script( 'my-cdn-query' );
+    wp_register_script( 'jquery', 'https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js', array(), '1.0.0', true );
+    wp_enqueue_script( 'jquery' );
     wp_register_script( 'my-cdn-poper', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', array(), '1.0.0', true );
     wp_enqueue_script( 'my-cdn-poper' );
     wp_register_script( 'my-cdn-bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js', array(), '1.0.0', true );
