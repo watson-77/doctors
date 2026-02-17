@@ -43,7 +43,8 @@ if (!empty($city_terms)) {
     <div class="row align-items-center">
         <div class="col">
             <h1><?php echo esc_html($current_term->name); ?></h1>
-            <div class="text-right float-start"><?php echo '<a href="' . esc_url($link_a) . '" class="btn btn-warning">К общему списку</a>'; ?></div> <div class="clearfix"></div>
+            <div class="text-right float-start"><?php echo '<a href="' . esc_url($link_a) . '" class="btn btn-warning">К общему списку</a>'; ?></div>
+            <div class="clearfix"></div>
         </div>
         <!-- Фильтр по специализации -->
         <?php if (!empty($all_specializations)) : ?>
@@ -67,11 +68,11 @@ if (!empty($city_terms)) {
 </div>
 <div class="container">
     <div class="row">
-    <!-- Индикатор загрузки -->
-            <div id="loading-indicator" class="loading-indicator" style="display: none;">
-                <div class="spinner"></div>
-                <span>Загрузка...</span>
-            </div>
+        <!-- Индикатор загрузки -->
+        <div id="loading-indicator" class="loading-indicator" style="display: none;">
+            <div class="spinner"></div>
+            <span>Загрузка...</span>
+        </div>
     </div>
 </div>
 <div class="clearfix"></div>

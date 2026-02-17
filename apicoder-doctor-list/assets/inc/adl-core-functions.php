@@ -103,7 +103,7 @@ function apicoder_doctors_pagination()
 function doctors_filter_enqueue_scripts()
 {
     // Подключаем только на странице архива doctors
-    if (is_post_type_archive('doctors') || is_tax( 'City' ) || is_tax( 'Specialization' )  ) {
+    if (is_post_type_archive('doctors') || is_tax('City') || is_tax('Specialization')) {
 
         // jQuery уже включен в WordPress
         wp_enqueue_script('jquery');
@@ -186,7 +186,7 @@ function doctors_filter_ajax_handler()
     if ($query->have_posts()) {
         while ($query->have_posts()) {
             $query->the_post();
-    ?>
+?>
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-3">
 
                 <?php include(ADL_CORE_TEMPL . 'doctor-card.php'); ?>
@@ -213,9 +213,10 @@ add_action('wp_ajax_nopriv_doctors_filter', 'doctors_filter_ajax_handler');
 /*
  * Footer copyright
  */
-function add_apicoder_div_to_footer() {
-    if (is_post_type_archive('doctors') || is_tax( 'City' ) || is_tax( 'Specialization' )  ) {
-    echo '<div class="container-fluid bg-dark sticky-bottom">
+function add_apicoder_div_to_footer()
+{
+    if (is_post_type_archive('doctors') || is_tax('City') || is_tax('Specialization')) {
+        echo '<div class="container-fluid bg-dark sticky-bottom">
     <div class="row">
         <footer class="d-flex w-100 justify-content-center p-3">
             <div class="text-white">&copy; All right reserved <a href="https://apicoder.ru" class="text-decoration-none">Apicoder</a> 2026</div>

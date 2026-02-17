@@ -47,9 +47,12 @@
 					<?php edit_post_link('<span class="btn btn-md btn-primary">' . __('Редактировать', 'apicoder') . '</span>', '<div class="card-footer text-right my-1">', '</div>'); ?>
 					<div class="clearfix"></div>
 				</div>
-<div class="clearfix mb-5"> </div>
+				<div class="clearfix mb-5"> </div>
 
-<div class="card border border-success"><div class="card-body"><?php if ( comments_open() || get_comments_number() ) : comments_template(); endif; ?></div></div>
+				<div class="card border border-success">
+					<div class="card-body"><?php if (comments_open() || get_comments_number()) : comments_template();
+											endif; ?></div>
+				</div>
 			<?php endwhile; ?>
 
 		<?php else : ?>

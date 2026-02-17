@@ -1,4 +1,4 @@
-<?php get_header(); 
+<?php get_header();
 
 $current_term = get_queried_object(); // текущая специализация
 // Получаем типы записей, привязанные к этой таксономии
@@ -40,14 +40,15 @@ if (!empty($specialization_terms)) {
     <div class="row align-items-center">
         <div class="col">
             <h1><?php echo esc_html($current_term->name); ?></h1>
-            <div class="text-right float-start"><?php echo '<a href="' . esc_url($link_a) . '" class="btn btn-warning">К общему списку</a>'; ?></div> <div class="clearfix"></div>
+            <div class="text-right float-start"><?php echo '<a href="' . esc_url($link_a) . '" class="btn btn-warning">К общему списку</a>'; ?></div>
+            <div class="clearfix"></div>
         </div>
-        
+
         <!-- Фильтр по городу -->
         <?php if (!empty($all_city)) : ?>
             <div class="col-auto">
                 <select id="city-filter" class="form-control form-select">
-                    
+
                     <option value="all">Все города</option>
                     <?php foreach ($all_city as $id) : ?>
                         <option value="<?php echo esc_attr($id->slug); ?>"><?php echo esc_html($id->name); ?></option>
